@@ -1,22 +1,11 @@
 package com.example.ejercicio6.Entity;
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
-import org.springframework.boot.autoconfigure.batch.BatchProperties;
 
 import jakarta.validation.constraints.NotNull;
 
-
-import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
-import org.springframework.boot.autoconfigure.batch.BatchProperties;
-
-import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import java.math.BigDecimal;
 import java.time.Instant;
-import java.util.Date;
 
 
 @Entity
