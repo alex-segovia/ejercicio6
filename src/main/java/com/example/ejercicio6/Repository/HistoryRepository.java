@@ -1,4 +1,4 @@
-package com.example.laboratorio4.repository;
+package com.example.ejercicio6.Repository.;
 
 import com.example.laboratorio4.entity.History;
 import org.springframework.data.jpa.repository.JpaRepository;

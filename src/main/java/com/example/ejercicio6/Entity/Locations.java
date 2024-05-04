@@ -1,11 +1,10 @@
-package com.example.laboratorio4.entity;
+package com.example.ejercicio6.Entity;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "locations")
 public class Locations {
-
     @Id
     @Column(name = "location_id")
     private int id;

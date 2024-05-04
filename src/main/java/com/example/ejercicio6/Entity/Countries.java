@@ -1,6 +1,6 @@
-package com.example.laboratorio4.entity;
-
-import javax.persistence.*;
+package com.example.ejercicio6.Entity;
+import com.example.ejercicio6.Entity.Regions;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "countries")
