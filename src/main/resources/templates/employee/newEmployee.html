@@ -14,38 +14,45 @@
             <div class="mb-3">
                 <label class="form-label">Nombre</label>
                 <input type="text" class="form-control" th:field="*{firstName}">
+                <div class="invalid-feedback" th:if = "${#fields.hasErrors('firstName')}" th:errors="*{firstName}">  </div>
             </div>
             <div class="mb-3">
                 <label  class="form-label">Apellido</label>
                 <input type="text" class="form-control" th:field="*{lastName}" >
+                <div class="invalid-feedback" th:if = "${#fields.hasErrors('lastName')}" th:errors="*{lastName}">  </div>
+
             </div>
 
             <div class="mb-3">
                 <label class="form-label">Correo Electrónico</label>
                 <input type="email" class="form-control"  aria-describedby="emailHelp" th:field="*{email}">
+                <div class="invalid-feedback" th:if = "${#fields.hasErrors('email')}" th:errors="*{email}">  </div>
+
             </div>
 
 
 
             <div class="mb-3">
                 <label  class="form-label">Cargo</label>
-                <SELECT th:field="*{jobId}" class="form-control"  aria-describedby="emailHelp"></SELECT>
+                <SELECT th:field="*{job}" class="form-control"  aria-describedby="emailHelp"></SELECT>
             </div>
 
 
             <div class="mb-3">
                 <label class="form-label">Sueldo</label>
                 <input type="text" th:field="*{salary}" class="form-control"  >
+                <div class="invalid-feedback" th:if = "${#fields.hasErrors('salary')}" th:errors="*{salary}">  </div>
+
             </div>
             <div class="mb-3">
                 <label  class="form-label">Jefe</label>
-                <select th:field="*{managerId}" class="form-control" ></select>
+                <select th:field="*{manager}" class="form-control" ></select>
             </div>
 
 
             <div class="mb-3">
                 <label  class="form-label">Departamento</label>
-                <select th:field="*{departmentId}" class="form-control"  aria-describedby="emailHelp"></select>
+                <select th:field="*{department}" class="form-control"  aria-describedby="emailHelp"></select>
             </div>
 
 
@@ -53,6 +60,8 @@
             <div class="mb-3">
                 <label  class="form-label">Contraseña</label>
                 <input type="password" th:field="*{password}" class="form-control" >
+                <div class="invalid-feedback" th:if = "${#fields.hasErrors('password')}" th:errors="*{password}">  </div>
+
             </div>
 
 

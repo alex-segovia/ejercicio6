@@ -1,4 +1,4 @@
-package com.example.laboratorio4.controller;
+package com.example.ejercicio6.Controller;
 
 
 import org.springframework.stereotype.Controller;
@@ -23,7 +23,7 @@ public class SearchController {
 
     @PostMapping("/busqueda")
     public String buscar (){
-
+return "";
         //COMPLETAR
     }
 
