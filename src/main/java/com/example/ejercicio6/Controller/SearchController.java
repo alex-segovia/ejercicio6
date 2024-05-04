@@ -1,4 +1,4 @@
-package com.example.laboratorio4.controller;
+package com.example.ejercicio6.Controller;
 
 
 import com.example.ejercicio6.Dto.EmployeeDepartmentDto;
@@ -31,7 +31,7 @@ public class SearchController {
 
     @PostMapping("/busqueda")
     public String buscar (){
-
+return "";
         //COMPLETAR
     }
 
