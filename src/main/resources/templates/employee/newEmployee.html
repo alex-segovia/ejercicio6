@@ -8,51 +8,51 @@
 
     </head>
     <body>
-        <form>
+        <form method="post" th:action="@{'/employee/save'}" th:object="${employees}">
 
 
             <div class="mb-3">
                 <label class="form-label">Nombre</label>
-                <input type="email" class="form-control"  aria-describedby="emailHelp">
+                <input type="text" class="form-control" th:field="*{firstName}">
             </div>
             <div class="mb-3">
                 <label  class="form-label">Apellido</label>
-                <input type="password" class="form-control" >
+                <input type="text" class="form-control" th:field="*{lastName}" >
             </div>
 
             <div class="mb-3">
                 <label class="form-label">Correo Electrónico</label>
-                <input type="email" class="form-control"  aria-describedby="emailHelp">
+                <input type="email" class="form-control"  aria-describedby="emailHelp" th:field="*{email}">
             </div>
 
 
 
             <div class="mb-3">
                 <label  class="form-label">Cargo</label>
-                <SELECT type="email" class="form-control"  aria-describedby="emailHelp"></SELECT>
+                <SELECT th:field="*{jobId}" class="form-control"  aria-describedby="emailHelp"></SELECT>
             </div>
 
 
             <div class="mb-3">
                 <label class="form-label">Sueldo</label>
-                <input type="email" class="form-control"  >
+                <input type="text" th:field="*{salary}" class="form-control"  >
             </div>
             <div class="mb-3">
                 <label  class="form-label">Jefe</label>
-                <select type="password" class="form-control" ></select>
+                <select th:field="*{managerId}" class="form-control" ></select>
             </div>
 
 
             <div class="mb-3">
                 <label  class="form-label">Departamento</label>
-                <select type="email" class="form-control"  aria-describedby="emailHelp"></select>
+                <select th:field="*{departmentId}" class="form-control"  aria-describedby="emailHelp"></select>
             </div>
 
 
 
             <div class="mb-3">
                 <label  class="form-label">Contraseña</label>
-                <input type="password" class="form-control" >
+                <input type="password" th:field="*{password}" class="form-control" >
             </div>
 
 
