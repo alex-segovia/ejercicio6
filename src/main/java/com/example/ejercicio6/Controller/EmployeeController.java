@@ -41,7 +41,7 @@ public class EmployeeController {
     @GetMapping("/new")
     public String nuevoEmployeeForm() {
         //COMPLETAR
-        return "employee/Frm";
+        return "employee/newEmployee";
     }
 
     @PostMapping("/save")
@@ -53,7 +53,7 @@ public class EmployeeController {
             model.addAttribute("listaJobs", jobsRepository.findAll());
             model.addAttribute("listaJefes", employeesRepository.findAll());
             model.addAttribute("listaDepartments", departmentsRepository.findAll());
-            return "employee/Frm";
+            return "employee/newEmployee";
         }else {
 
             if (employees.getEmployeeid() == 0) {
