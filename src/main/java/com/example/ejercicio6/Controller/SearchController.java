@@ -1,13 +1,20 @@
 package com.example.ejercicio6.Controller;
 
 
+import com.example.ejercicio6.Repository.EmployeesRepository;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping("/Search")
 public class SearchController {
 
+    private final EmployeesRepository employeesRepository;
+
+    public SearchController(EmployeesRepository employeesRepository) {
+        this.employeesRepository = employeesRepository;
+    }
 
     @GetMapping(value = {"","/"})
     public String indice(){
@@ -15,9 +22,8 @@ public class SearchController {
     }
 
     @GetMapping(value = {"/Salario"})
-    public String listaEmpleadosMayorSalrio (){
-
-      //COMPLETAR
+    public String listaEmpleadosMayorSalrio (Model model){
+        model.addAttribute("empleadosMayorSalario",employeesRepository.listarEmpleadorXmayorSalario());
         return "Search/lista2";
     }
 

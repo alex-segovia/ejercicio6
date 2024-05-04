@@ -9,17 +9,33 @@
     <title>Empleados con Mayor Salario</title>
 </head>
 <body>
+
 <div class="container">
     <h1>Empleados con Mayor Salario en la Empresa</h1>
     <!-- COMPLETAR -->
     <table class="table">
         <thead>
-        <!-- COMPLETAR -->
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Fecha inicio</th>
+            <th>Fecha fin</th>
+            <th>Puesto</th>
+        </tr>
         </thead>
         <tbody>
-        <!-- COMPLETAR -->
+        <tr th:each="empXsalary:${empleadosMayorSalario}">
+            <td th:text="${empXsalary.getfirst_name()}"></td>
+            <td th:text="${empXsalary.getlast_name()}"></td>
+            <td th:text="${empXsalary.getfecha_inicio()}"></td>
+            <td th:text="${empXsalary.getfecha_fin()}"></td>
+            <td th:text="${empXsalary.getjob_title()}"></td>
+        </tr>
         </tbody>
     </table>
 </div>
+
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+
 </body>
 </html>
