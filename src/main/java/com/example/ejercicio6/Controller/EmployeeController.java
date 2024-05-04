@@ -73,6 +73,9 @@ public class EmployeeController {
                                  @RequestParam("id") int id) {
 
         Optional<Employees> optionalEmployees = employeesRepository.findById(id);
+        model.addAttribute("listaEmployee", employeesRepository.findAll());
+        model.addAttribute("listaJobs", jobsRepository.findAll());
+        model.addAttribute("listaDepartments", departmentsRepository.findAll());
 
         if (optionalEmployees.isPresent()) {
             employees = optionalEmployees.get();

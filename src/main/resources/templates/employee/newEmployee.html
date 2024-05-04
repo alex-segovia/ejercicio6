@@ -34,7 +34,11 @@
 
             <div class="mb-3">
                 <label  class="form-label">Cargo</label>
-                <SELECT th:field="*{job}" class="form-control"  aria-describedby="emailHelp"></SELECT>
+                <SELECT th:field="*{job}" class="form-control"  aria-describedby="emailHelp">
+
+                    <option th:text = "${employee.job.getJobtitle()}" th:value="${employee.job.getJobid()}" th:each=" employee:${listaEmployee}"></option>
+
+                </SELECT>
             </div>
 
 
@@ -65,8 +69,8 @@
             </div>
 
 
-            <button class="btn btn-danger"> Cancelar</button>
-            <button type="submit" class="btn btn-primary">Actualizar</button>
+            <a th:href="@{'/employee/'}" class="btn btn-danger">Cancelar</a>
+            <button type="submit" class="btn btn-primary">Registrar</button>
         </form>
     </body>
 </html>
