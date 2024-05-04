@@ -1,21 +1,20 @@
 package com.example.ejercicio6.Controller;
 
 
-import com.example.ejercicio6.Dto.EmployeeDepartmentDto;
 import com.example.ejercicio6.Repository.EmployeesRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @Controller
 @RequestMapping("/Search")
 public class SearchController {
 
-    @Autowired
-    EmployeesRepository employeesRepository;
+    private final EmployeesRepository employeesRepository;
+
+    public SearchController(EmployeesRepository employeesRepository) {
+        this.employeesRepository = employeesRepository;
+    }
 
     @GetMapping(value = {"","/"})
     public String indice(){
@@ -23,9 +22,8 @@ public class SearchController {
     }
 
     @GetMapping(value = {"/Salario"})
-    public String listaEmpleadosMayorSalrio (){
-
-      //COMPLETAR
+    public String listaEmpleadosMayorSalrio (Model model){
+        model.addAttribute("empleadosMayorSalario",employeesRepository.listarEmpleadorXmayorSalario());
         return "Search/lista2";
     }
 
@@ -43,11 +41,8 @@ return "";
     }
 
     @GetMapping("/listar")
-    public String listarEmpleadoDep(@RequestParam("idDepartment") int idDepartment, Model model) {
-        List<EmployeeDepartmentDto> listaDepartamentosEmpleados = employeesRepository.listarEmpleadoDepartamento(idDepartment);
-        model.addAttribute("listaDepartamentosEmpleados", listaDepartamentosEmpleados);
-
-
+    public String listarEmpleadoDep() {
+        //COMPLETAR
         return "/Search/lista3";
 
     }
