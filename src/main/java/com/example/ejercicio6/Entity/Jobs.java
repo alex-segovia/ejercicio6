@@ -5,7 +5,6 @@ import jakarta.persistence.*;
 @Entity
 @Table(name = "jobs")
 public class Jobs {
-
     @Id
     @Column(name = "job_id")
     private String jobid;

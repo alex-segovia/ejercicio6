@@ -18,13 +18,13 @@ import java.util.Optional;
 public class EmployeeController {
 
     @Autowired
-    com.example.laboratorio4.repository.EmployeesRepository employeesRepository;
+    com.example.ejercicio6.Repository.EmployeesRepository employeesRepository;
 
     @Autowired
-    com.example.laboratorio4.repository.JobsRepository jobsRepository;
+    com.example.ejercicio6.Repository.JobsRepository jobsRepository;
 
     @Autowired
-    com.example.laboratorio4.repository.DepartmentsRepository departmentsRepository;
+    com.example.ejercicio6.Repository.DepartmentsRepository departmentsRepository;
 
     @GetMapping(value = {"","/"})
     public String listaEmployee(Model model){

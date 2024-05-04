@@ -1,6 +1,6 @@
-package com.example.laboratorio4.repository;
+package com.example.ejercicio6.Repository;
 
-import com.example.laboratorio4.entity.Departments;
+import com.example.ejercicio6.Entity.Departments;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

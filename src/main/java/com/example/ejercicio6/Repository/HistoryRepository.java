@@ -1,6 +1,6 @@
-package com.example.ejercicio6.Repository.;
+package com.example.ejercicio6.Repository;
 
-import com.example.laboratorio4.entity.History;
+import com.example.ejercicio6.Entity.History;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
